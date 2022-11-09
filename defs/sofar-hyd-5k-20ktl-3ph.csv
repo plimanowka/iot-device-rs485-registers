@@ -1,0 +1,85 @@
+address;name;desc_en;desc_pl;type;divisor;unit;groups
+0x0404;SysState;System state;Stan falownika;"U16:Enum{
+  0：Waiting
+  1：Checking
+  2：On-grid
+  3：Emergency Mode
+  4：Recoverable Fault
+  5：Permanent Fault
+  6：Upgarding
+  7：Self-charging
+}";;;status,main
+0x0418;Temperature_Env1;System temperature;Temperatura falownika;I16;1;degC;status,temp,main
+0x0419;Temperature_Env2;System temperature 2;Temperatura falownika 2;I16;1;degC;status,temp
+0x0405;Fault1;;;U16;;;status,fault
+0x0406;Fault2;;;U16;;;status,fault
+0x0407;Fault3;;;U16;;;status,fault
+0x1480;EvLst_ID1;;;U16;;;status,event
+0x1481;EvLst_YM1;;;U16;;;status,event
+0x1482;EvLst_DH1;;;U16;;;status,event
+0x1483;EvLst_MS1;;;U16;;;status,event
+0x1484;EvLst_ID2;;;U16;;;status,event
+0x1485;EvLst_YM2;;;U16;;;status,event
+0x1486;EvLst_DH2;;;U16;;;status,event
+0x1487;EvLst_MS2;;;U16;;;status,event
+;;;;;;;
+0x0484;Frequency_Grid;Grid frequency;Sieć - częstotliwość;U16;100;Hz;metrics,grid,main
+0x0485;ActivePower_Output_Total;;;I16;100;kW;metrics,grid,power,main
+0x0487;ApparentPower_Output_Total;;;I16;100;kW;metrics,grid,power,apparent
+0x0488;ActivePower_PCC_Total;;;I16;100;kW;metrics,pcc,power,main
+0x048A;ApparentPower_PCC_Total;;;I16;100;kW;metrics,pcc,power,apparent
+0x0504;ActivePower_Load_Total;;;I16;100;kW;metrics,load,power,main
+0x0506;ApparentPower_Load_Total;;;I16;100;kW;metrics,load,power,apparent
+0x048D;Voltage_Phase_R;Grid phase R voltage;Sieć - napięcie fazy 1;U16;10;V;metrics,line,voltage
+0x048E;Current_Output_R;;;U16;100;A;metrics,line,current
+0x0498;Voltage_Phase_S;Grid phase S voltage;Sieć - napięcie fazy 2;U16;10;V;metrics,line,voltage
+0x0499;Current_Output_S;;;U16;100;A;metrics,line,current
+0x04A3;Voltage_Phase_T;Grid phase T voltage;Sieć - napięcie fazy 3;U16;10;V;metrics,line,voltage
+0x04A4;Current_Output_T;;;U16;100;A;metrics,line,current
+0x04AE;ActivePower_PV_Ext;;;U16;100;kW;metrics,pv,power
+0x04AF;ActivePower_Load_Sys;;;U16;100;kW;metrics,load,power,sys
+0x0584;Voltage_PV1;PV MPPT 1 voltage;PV MPPT 1 - napięcie;U16;10;V;metrics,pv,voltage
+0x0585;Current_PV1;PV MPPT 1 current;PV MPPT 1 - natężenie;U16;100;A;metrics,pv,current
+0x0586;Power_PV1;PV MPPT 1 power;PV MPPT 1 - moc;U16;100;kW;metrics,pv,power,main
+0x0587;Voltage_PV2;PV MPPT 2 voltage;PV MPPT 2 - napięcie;U16;10;V;metrics,pv,voltage
+0x0588;Current_PV2;PV MPPT 2 current;PV MPPT 2 - natężenie;U16;100;A;metrics,pv,current
+0x0589;Power_PV2;PV MPPT 2 power;PV MPPT 2 - moc;U16;100;kW;metrics,pv,power,main
+0x0604;Voltage_Bat1;Battery 1 voltage;Bateria 1 - napięcie;U16;10;V;metrics,bat,voltage
+0x0605;Current_Bat1;Battery 1 current;Bateria 1 - natężenie;I16;100;A;metrics,bat,current
+0x0606;Power_Bat1;Battery 1 power;Bateria 1 - moc;I16;100;kW;metrics,bat,power
+0x060A;ChargeCycle_Bat1;Battery 1 cycles;Bateria 1 - cykle;U16;1;cycle;metrics,bat,cycle
+0x060B;Voltage_Bat2;Battery 2 voltage;Bateria 2 - napięcie;U16;10;V;metrics,bat,voltage
+0x060C;Current_Bat2;Battery 2 current;Bateria 2 - natężenie;I16;100;A;metrics,bat,current
+0x060D;Power_Bat2;Battery 2 power;Bateria 2 - moc;I16;100;kW;metrics,bat,power
+0x0611;ChargeCycle_Bat2;Battery 2 cycles;Bateria 2 - cykle;U16;1;cycle;metrics,bat,cycle
+0x0784;ArcStrength_Chn1;;;I16;1;;metrics,arc
+0x0785;ArcStrength_Chn2;;;I16;1;;metrics,arc
+;;;;;;;
+0x2004;Country_Code;Safety settings - Country code;Ust. bezp. - kod kraju;U16;;;info
+0x0841;RatedVoltage;;;U16;10;V;info
+0x0842;FirstOvervoltageProtectionValue;;;U16;10;V;info,ovp
+0x0843;FirstOvervoltageProtectionTime;;;U16;1;10ms;info,ovp
+0x0844;SecondOvervoltageProtectionValue;;;U16;10;V;info,ovp
+0x0845;SecondOvervoltageProtectionTime;;;U16;1;10ms;info,ovp
+0x0846;ThirdOvervoltageProtectionValue;;;U16;10;V;info,ovp
+0x0847;ThirdOvervoltageProtectionTime;;;U16;1;10ms;info,ovp
+0x0848;FirstUnderVoltageProtectionValue;;;U16;10;V;info,ovp
+0x0849;FirstUndervoltageProtectionTime;;;U16;1;10ms;info,ovp
+0x084A;SecondUnderVoltageProtectionValue;;;U16;10;V;info,uvp
+0x084B;SecondUndervoltageProtectionTime;;;U16;1;10ms;info,uvp
+0x084C;ThirdUnderVoltageProtectionValue;;;U16;10;V;info,uvp
+0x084D;ThirdUndervoltageProtectionTime;;;U16;1;10ms;info,uvp
+0x084E;10MinOvervoltageProtectionValue;;;U16;10;V;info,ovp
+0x0900;RemoteConfig;;;U16;;;info
+0x0901;ActiveOutputLimit;;;U16;10;%;info
+0x0902;ActiveOutputDownSpeed;;;U16;1;%Pn/min;info
+0x0903;GridVoltageDropStart;;;U16;10;V;info
+0x0904;GridVoltageDropStop;;;U16;10;V;info
+0x0905;GridVoltageDropMinPower;;;I16;1;%;info
+0x0906;OvervoltageDownSpeed;;;U16;1;%Pn/min;info
+0x0912;RefluxPower;;;U16;1;%;info
+0x0913;RefluxOVloadTime;;;U16;1;10ms;info
+;;;;;;;
+0x1023;AntiReflux_Control;;;U16;;;status
+0x1024;AntiReflux_Power;;;U16;1;10W;status
+0x1038;UnbalancedSupport_Control;;;U16;;;status
