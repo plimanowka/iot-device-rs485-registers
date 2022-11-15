@@ -73,7 +73,7 @@ def parseUnit(field: str, field_subtype: str, unit: str):
     else:
         return unit    
 
-def read(file, lang = None, **fmtparams):
+def read(file, lang = None, **fmtparams) -> RegisterDef:
     registers = []
     line = 0
     desc_locales = {}
