@@ -22,7 +22,7 @@ def main(args):
     
     if len(args)==0 or len({'-help', '--help'} & set(args))>0:
         log.info(
-            f"""R3485 registers def file parser.
+            f"""RS485 registers def file parser.
                Usage:
                  {sys.argv[0]} [-g GROUPS] [CSV DictReader format params] regs-file.csv
                Where:
